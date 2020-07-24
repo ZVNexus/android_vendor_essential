@@ -16,9 +16,15 @@ PRODUCT_SOONG_NAMESPACES += \
     vendor/essential/mata
 
 PRODUCT_COPY_FILES += \
+    vendor/essential/mata/proprietary/product/framework/vendor.essential.hardware.sidecar-V1.0-java.jar:$(TARGET_COPY_OUT_PRODUCT)/framework/vendor.essential.hardware.sidecar-V1.0-java.jar \
+    vendor/essential/mata/proprietary/system/app/Score/lib/arm64/libCxAudioHidLib.so:$(TARGET_COPY_OUT_SYSTEM)/app/Score/lib/arm64/libCxAudioHidLib.so \
+    vendor/essential/mata/proprietary/system/app/Score/lib/arm64/libcxaudiohidlib_embcb_jni.so:$(TARGET_COPY_OUT_SYSTEM)/app/Score/lib/arm64/libcxaudiohidlib_embcb_jni.so \
+    vendor/essential/mata/proprietary/system/app/Score/lib/arm64/libusb1.0.so:$(TARGET_COPY_OUT_SYSTEM)/app/Score/lib/arm64/libusb1.0.so \
+    vendor/essential/mata/proprietary/system/bin/fastboot_target:$(TARGET_COPY_OUT_SYSTEM)/bin/fastboot_target \
     vendor/essential/mata/proprietary/system/etc/permissions/cneapiclient.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/cneapiclient.xml \
     vendor/essential/mata/proprietary/system/etc/permissions/com.quicinc.cne.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/com.quicinc.cne.xml \
     vendor/essential/mata/proprietary/system/etc/permissions/embms.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/embms.xml \
+    vendor/essential/mata/proprietary/system/etc/permissions/vendor-essential-hardware-sidecar.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/vendor-essential-hardware-sidecar.xml \
     vendor/essential/mata/proprietary/system/framework/cneapiclient.jar:$(TARGET_COPY_OUT_SYSTEM)/framework/cneapiclient.jar \
     vendor/essential/mata/proprietary/system/framework/com.quicinc.cne.api-V1.0-java.jar:$(TARGET_COPY_OUT_SYSTEM)/framework/com.quicinc.cne.api-V1.0-java.jar \
     vendor/essential/mata/proprietary/system/framework/com.quicinc.cne.jar:$(TARGET_COPY_OUT_SYSTEM)/framework/com.quicinc.cne.jar \
@@ -81,6 +87,7 @@ PRODUCT_COPY_FILES += \
     vendor/essential/mata/proprietary/vendor/lib64/sensors.hal.tof.so:$(TARGET_COPY_OUT_VENDOR_OVERLAY)/lib64/sensors.hal.tof.so
 
 PRODUCT_PACKAGES += \
+    Score \
     embms \
     ims \
     uceShimService \
@@ -88,4 +95,5 @@ PRODUCT_PACKAGES += \
     HotwordEnrollmentOKGoogleWCD9335 \
     HotwordEnrollmentTGoogleWCD9335 \
     HotwordEnrollmentXGoogleWCD9335 \
+    Klik \
     qcrilmsgtunnel

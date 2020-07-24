@@ -20,6 +20,16 @@ soong_namespace {
 }
 
 android_app_import {
+	name: "Score",
+	owner: "essential",
+	apk: "proprietary/system/app/Score/Score.apk",
+	certificate: "platform",
+	dex_preopt: {
+		enabled: false,
+	},
+}
+
+android_app_import {
 	name: "embms",
 	owner: "essential",
 	apk: "proprietary/system/app/embms/embms.apk",
@@ -87,6 +97,18 @@ android_app_import {
 	owner: "essential",
 	apk: "proprietary/system/priv-app/HotwordEnrollmentXGoogleWCD9335/HotwordEnrollmentXGoogleWCD9335.apk",
 	presigned: true,
+	dex_preopt: {
+		enabled: false,
+	},
+	privileged: true,
+}
+
+android_app_import {
+	name: "Klik",
+	owner: "essential",
+	apk: "proprietary/system/priv-app/Klik/Klik.apk",
+	presigned: true,
+	overrides: ["Camera2 ParanoidCamera"],
 	dex_preopt: {
 		enabled: false,
 	},
